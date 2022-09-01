@@ -1,0 +1,145 @@
+
+body{
+  padding: 30px 40px;
+  display: flex;
+  gap: 40px;
+}
+.left-part{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.title{
+  font-size: 25.6px;
+  font-weight: 600;
+}
+.line{
+  width: auto;
+  height: 1px;
+  background-color: #99999950;
+}
+
+.sortcard, .filtercard{
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid #99999950;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #99999940;
+}
+
+.cardtitle, .sortcard-filter, .datefilter, .slider, .keywords{
+  padding: 14px 16px;
+}
+
+.cardtitle{
+  font-size: 17.6px;
+  font-weight: 600;
+}
+
+.sortcard-filter{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.dropdown select{
+  border: none;
+  background-color: #99999980;
+  border-radius: 5px;
+  height: 34px;
+  padding:6px 12px ;
+}
+
+.datefilter{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.from, .to{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #99999980;
+}
+
+input{
+  color: #99999980;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  height: 34px;
+  padding: 6px 12px;
+}
+
+.keywords{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+button{
+  display: flex;
+  width: 100%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  height: 44px;
+  background-color: #01B4E4;
+  color: white;
+  font-size: 19.2px;
+  font-weight: 600;
+}
+
+.right-part{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 65px;
+  gap: 30px;
+}
+
+.cards{
+  width: 162px;
+  height: 343px;
+  border: 1px solid #99999930;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 5px 5px 15px #99999940;
+}
+
+.cards-content{
+  padding: 26px 10px 12px 10px;
+}
+
+.cards img{
+  width: 161px;
+  height: 200px;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.cards-title{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-part{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

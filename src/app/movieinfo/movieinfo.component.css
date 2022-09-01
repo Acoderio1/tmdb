@@ -1,0 +1,265 @@
+
+.header{
+    padding: 30px 40px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    height: auto;
+    gap: 30px;
+    background-color: #210C0C99;
+    background-blend-mode:color-dodge;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.header-movieimg img{
+    width: 300px;
+    border-radius: 10px;
+}
+
+.header-title-movieinfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.header-title{
+    font-size: 35.2px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-title-rating{
+    color: #FFFFFF99;
+    font-size: 16px;
+    display: inline;
+    padding: 1px;
+    border: 1px solid white;
+}
+
+.header-score{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-score button{
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-tag{
+    font-size: 17.6px;
+    font-weight: 400;
+    color: white;
+}
+
+.header-details-title{
+    font-size: 20.8px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-details-para{
+    font-size: 16px;
+    color: white;
+}
+
+.header-cred{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-cred-para{
+    font-size: 14.4px;
+    color: white;
+}
+
+.content{
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.content-div1{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+}
+
+.content-div1-p1-title{
+    margin-bottom: 20px;
+    font-size: 22.4px;
+    font-weight: 600;
+}
+
+.content-div1-p1-content{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.p1-cards-content{
+    padding-bottom: 10px;
+}
+
+
+.content-div1-p1-cards{
+    width: 138px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+    height: auto;
+    border: 1px solid #99999930;
+    box-shadow: 5px 5px 15px #99999940;
+    border-radius: 10px;
+}
+
+.content-div1-p1-cards img{
+    width: 138px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.p1-cards-title{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.p1-cards-name{
+    font-size: 14.4px;
+}
+
+.p1-cards-noep{
+    font-size: 14.4px;
+    color: #00000080;
+}
+
+.content-div1-p1-sub{
+    font-size: 17.6px;
+    font-weight: 600;
+}
+
+.line{
+    height: 1px;
+    background-color: grey;
+}
+
+.content-div1-p2-card{
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.p2-cards{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.content-div1-p2-title{
+    font-size: 22.4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.p2-cards img{
+    width: 250px;
+    height: 141px;
+    border-radius: 10px;
+    object-fit:cover;
+}
+
+.p2-card-content{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.content-div2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.content-div2-title{
+    font-size: 17.6px;
+    font-weight: 600;
+}
+
+.wrapperforkey{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    
+}
+
+.wrapperforkey div{
+    background-color: #0000001A;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-movieimg img{
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+::-webkit-scrollbar {
+    height: 8px;
+    background: white;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

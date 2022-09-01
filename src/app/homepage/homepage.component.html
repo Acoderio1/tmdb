@@ -1,0 +1,84 @@
+<app-header></app-header>
+<body>
+    <div style="background-image: url('../assets/hdrimg.jpg');" class="homepage-header">
+        <div class="homepage-header-title">Welcome.</div>
+        <div class="homepage-header-content">Millions of movies, TV shows and people to discover. Explore now.</div><br>
+        <div class="searchbar">
+            <input id="searchbar" class="homepage-header-srch" type="text" placeholder="Search...">
+            <button class="Searchbutton" (click)="search()">Search</button>
+        </div>
+    </div>
+    <div class="div1">
+        <div class="div1-header">
+            <div class="div1-title">What's Popular</div>
+            <div class="div1-options">
+                <ul>
+                    <li><button>Streaming</button></li>
+                    <li><button>On TV</button></li>
+                </ul>
+                <select name="dropdown" id="dropdown">
+                    <option value="">Streaming</option>
+                    <option value="">On TV</option>
+                </select>
+            </div>
+        </div>
+        <div class="div1-content">
+            <div class="div1-card" *ngFor = 'let movie of popmovies' (click) = "name(movie.id)">
+                <div class="div1-card-img"><img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie.poster_path}}" alt=""></div>
+                <div class="div1-card-content">
+                    <div class="div1-card-content-title">{{movie.title}}</div>
+                    <div class="div1-card-content-para">{{movie.release_date}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div1">
+        <div class="div1-header">
+            <div class="div1-title">Now Playing</div>
+            <div class="div1-options">
+                <ul>
+                    <li><button>Streaming</button></li>
+                    <li><button>On TV</button></li>
+                </ul>
+                <select name="dropdown" id="dropdown">
+                    <option value="">Streaming</option>
+                    <option value="">On TV</option>
+                </select>
+            </div>
+        </div>
+        <div class="div1-content">
+            <div class="div1-card" *ngFor = 'let movie of nplaymovies' (click) = "name(movie.id)">
+                <div class="div1-card-img"><img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie.poster_path}}" alt=""></div>
+                <div class="div1-card-content">
+                    <div class="div1-card-content-title">{{movie.title}}</div>
+                    <div class="div1-card-content-para">{{movie.release_date}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div1">
+        <div class="div1-header">
+            <div class="div1-title">Trending</div>
+            <div class="div1-options">
+                <ul>
+                    <li><button>Today</button></li>
+                    <li><button>This Week</button></li>
+                </ul>
+                <select name="dropdown" id="dropdown">
+                    <option value="">Streaming</option>
+                    <option value="">On TV</option>
+                </select>
+            </div>
+        </div>
+        <div class="div1-content">
+            <div class="div1-card" *ngFor = 'let movie of trendmovies' (click) = "name(movie.id)">
+                <div class="div1-card-img"><img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie.poster_path}}" alt=""></div>
+                <div class="div1-card-content">
+                    <div class="div1-card-content-title">{{movie.original_title || movie.original_name}}</div>
+                    <div class="div1-card-content-para">{{movie.release_date || movie.first_air_date}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>

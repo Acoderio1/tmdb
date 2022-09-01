@@ -1,0 +1,65 @@
+<app-header></app-header>
+<body>
+    <div class="left-part">
+        <div class="title">
+            Popular Movies
+        </div>
+        <div class="sortcard">
+            <div class="cardtitle">
+                <div>Sort</div>
+            </div>
+            <div class="line"></div>
+            <div class="sortcard-filter">
+                <div class="cardsub">Sort Results By</div>
+                <div class="dropdown">
+                    <select name="dropdown" id="dropdown">
+                        <option value="popularity.desc">Popularity Descending</option>
+                        <option value="popularity.asc">Popularity Ascending</option>
+                        <option value="rating.desc">Rating Descending</option>
+                        <option value="rating.asc">Rating Ascending</option>
+                        <option value="release_date.desc">Release Date Descending</option>
+                        <option value="release_date.asc">Release Date Ascending</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="filtercard">
+            <div class="cardtitle">Filters</div>
+            <div class="line"></div>
+            <div class="datefilter">
+                <div class="cardsub">Release Dates</div>
+                <div class="from">
+                    <label for="fromdate">from</label>
+                    <input type="date" name="fromdate" id="fromdate" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="to">
+                    <label for="todate">to</label>
+                    <input type="date" name="todate" id="todate" placeholder="dd/mm/yyyy">
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="slider">
+                <div class="cardsub">User Score</div>
+                <input type="range" id="score" name="score" min="0" max="10">
+            </div>
+            <div class="line"></div>
+            <div class="keywords">
+                <div class="cardsub">Keywords</div>
+                <input type="text" id="keywords" name="keywords" placeholder="Filter by keywords">
+            </div>
+        </div>
+        <div class="button">
+            <button (click)="getmovies()">Search</button>
+        </div>
+    </div>
+    <div class="right-part">
+        <div class="cards" *ngFor="let movie of movies" (click) = "name(movie.id)">
+            <div class="cards-img"><img [src]="movie.poster_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+movie.poster_path) : '../assets/filterimg.jpg'" alt=""></div>
+            <div class="cards-content">
+                <div class="cards-title">{{movie.original_title || movie.original_name}}</div>
+                <div class="cards-sub">{{movie.release_date || movie.first_air_date}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>

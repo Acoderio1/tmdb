@@ -1,0 +1,15 @@
+
+
+.card{
+    border: 2px solid salmon;
+}
+
+.card-body{
+    margin: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

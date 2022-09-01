@@ -1,0 +1,44 @@
+<app-header></app-header>
+<body>
+    <div class="header">
+        <input type="text" name="" id="" placeholder="Search">
+    </div>
+    <div class="content">
+        <div class="filterinfo">
+            <div class="filterinfo-card">
+                <div class="filterinfo-card-title">
+                    <div class="card-title">Search Results</div>
+                </div>
+                <div class="filterinfo-card-contents">
+                    <div class="filterinfo-card-p1">
+                        <div>Movies</div>
+                        <div>200</div>
+                    </div>
+                    <div class="filterinfo-card-p1">
+                        <div>Tv Shows</div>
+                        <div>300</div>
+                    </div>
+                    <div class="filterinfo-card-p1">
+                        <div>Collections</div>
+                        <div>400</div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <div class="content2">
+            <div class="content-cards" *ngFor="let movie of movies" (click) = "name(movie.id)">
+                <div>
+                    <img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movie.poster_path}}" alt="">
+                </div>
+                <div class="content-cards-info">
+                    <div class="cards-info-head">
+                        <div class="cards-info-title">{{movie.original_title || movie.original_name}}</div>
+                        <div class="cards-info-title-sub">{{movie.release_date || movie.first_air_date}}</div>
+                    </div>
+                    <div  class="cards-info-sub">{{movie.overview}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>

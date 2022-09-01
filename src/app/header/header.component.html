@@ -1,0 +1,22 @@
+<nav>
+  <div class="side">
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+      <li><a href="" [routerLink]="['/filterpage','movie', 'popularity.asc']">Movies</a></li>
+      <li><a href="" [routerLink]="['/filterpage','tv', 'popularity.asc',]">Tv Shows</a></li>
+      <li><a class="active" [routerLink]="['/login']" (click)="link()">{{value}}</a></li>
+    </div>
+    <div id="main" class="main">
+      <button class="openbtn" id="openbtn" (click)="openNav()">☰</button>  
+    </div>
+  </div>
+  <ul class="ul2">
+    <li><a id="logo" href="" [routerLink]="['/homepage']"><img width="60px" src="../assets/footerlogo.svg" alt=""></a></li>
+  </ul>
+  <ul class="ul1">
+    <li><a href="" [routerLink]="['/homepage']"><img width="154px" src="../assets/TMDBlogo.svg" alt=""></a></li>
+    <li><a href="" [routerLink]="['/filterpage','movie']">Movies</a></li>
+    <li><a href="" [routerLink]="['/filterpage','tv']">Tv Shows</a></li>
+    <li style="float: right;"><a class="active" [routerLink]="['/login']" (click)="link()">{{value}}</a></li>
+  </ul>
+</nav>
