@@ -1,7 +1,7 @@
 <app-header></app-header>
 <body>
     <div class="header" style="background-color: #03254190;" *ngIf = 'movieinfo'>
-        <div class="header-movieimg"><img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{movieinfo.poster_path}}" alt=""></div>
+        <div class="header-movieimg"><img [src]="movieinfo.poster_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+movieinfo.poster_path) : '../assets/movieinfobg.jpg'" alt=""></div>
         <div class="header-content">
             <div class="header-title">{{movieinfo.title}}</div>
             <div class="header-title-movieinfo">
@@ -9,7 +9,7 @@
                 <div class="header-title-rating-sub">Drama . {{movieinfo.runtime}}min</div>
             </div>
             <div class="header-score">
-                <div clas="header-score-img">50%</div>
+                <div style="font-size:25px ;" clas="header-score-img">{{movieinfo.vote_average*10}}%</div>
                 <div class="header-score-p1">User Score</div>
                 <div class="header-score-btn"><button>Play Trailer</button></div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="content-div1-p1-title">Series Cast</div>
                 <div class="content-div1-p1-content">
                     <div class="content-div1-p1-cards" *ngFor ='let cast of moviecast'>
-                        <img src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{cast.profile_path}}" alt="">
+                        <img [src]="cast.profile_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+cast.profile_path) : '../assets/bryan.jpg'" alt="">
                         <div class="p1-cards-content">
                             <div class="p1-cards-title">{{cast.name}}</div>
                             <div class="p1-cards-name">{{cast.character}}</div>
@@ -45,7 +45,7 @@
                 <div class="content-div1-p2-title">Recommendations</div>
                 <div class="p2-cards">
                     <div class="content-div1-p2-card" *ngFor="let reco of moviereco" (click) = "name(reco.id)">
-                        <img height="150px" src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/{{reco.backdrop_path}}" alt="">
+                        <img height="150px" [src]="reco.backdrop_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+reco.backdrop_path) : '../assets/recimg.jpg'" alt="">
                         <div class="p2-card-content">
                             <div>{{reco.original_title}}</div>
                             <div>85%</div>
@@ -62,7 +62,7 @@
             </div>
             <div class="content-div2-p1">
                 <div class="content-div2-title">Network</div>
-                <div class="content-div2-content">Data</div>
+                <div class="content-div2-content">AMC</div>
             </div>
             <div class="content-div2-p1">
                 <div class="content-div2-title">Type</div>
