@@ -13,8 +13,6 @@
           <input formControlName="password" type="password" name="password" class="form-control" id="password" placeholder="Password">
           <span style="color: red;" *ngIf="password && password?.invalid && (password.touched)">Invalid Password Format</span>
         </div>
-        <div style="text-align: center;">Or</div>
-        <div><img src="" alt=""><img src="" alt=""><img src="" alt=""></div>
         <button style="background-color: #EE5684; border: none;" [disabled]="userForm.invalid" type="submit" class="btn btn-primary" (click)="loginUser()">Log In</button>
         <div>New User? <a href="" [routerLink]="['/signup']">Sign-UP</a></div>
       </form>
