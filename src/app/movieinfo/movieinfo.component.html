@@ -1,6 +1,6 @@
 <app-header></app-header>
 <body>
-    <div class="header" style="background-color: #03254190;" *ngIf = 'movieinfo'>
+    <div class="header" style="background-image: #032541" *ngIf = 'movieinfo'>
         <div class="header-movieimg"><img [src]="movieinfo.poster_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+movieinfo.poster_path) : '../assets/movieinfobg.jpg'" alt=""></div>
         <div class="header-content">
             <div class="header-title">{{movieinfo.title}}</div>
@@ -9,7 +9,7 @@
                 <div class="header-title-rating-sub">Drama . {{movieinfo.runtime}}min</div>
             </div>
             <div class="header-score">
-                <div style="font-size:25px ;" clas="header-score-img">{{movieinfo.vote_average*10}}%</div>
+                <div style="font-size:25px ;" clas="header-score-img">{{math.floor(movieinfo.vote_average*10)}}%</div>
                 <div class="header-score-p1">User Score</div>
                 <div class="header-score-btn"><button>Play Trailer</button></div>
             </div>
@@ -48,7 +48,7 @@
                         <img height="150px" [src]="reco.backdrop_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+reco.backdrop_path) : '../assets/recimg.jpg'" alt="">
                         <div class="p2-card-content">
                             <div>{{reco.original_title}}</div>
-                            <div>{{reco.vote_average*10}}%</div>
+                            <div>{{math.floor(reco.vote_average*10)}}%</div>
                         </div>
                     </div>
                 </div>

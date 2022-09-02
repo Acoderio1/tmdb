@@ -13,7 +13,7 @@ export class MovieinfoComponent implements OnInit {
   errorMessage: any;
   constructor(private movieinfoservice: all, private router: Router, private route: ActivatedRoute){}
   movieinfo: Movie | undefined;
-
+  math = Math;
   moviecast: Cast[] =[];
   moviereco: Movie[] = [];
 
