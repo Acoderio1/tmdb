@@ -48,7 +48,7 @@
                         <img height="150px" [src]="reco.backdrop_path ? ('https://image.tmdb.org/t/p/w370_and_h556_bestv2/'+reco.backdrop_path) : '../assets/recimg.jpg'" alt="">
                         <div class="p2-card-content">
                             <div>{{reco.original_title}}</div>
-                            <div>85%</div>
+                            <div>{{reco.vote_average*10}}%</div>
                         </div>
                     </div>
                 </div>
