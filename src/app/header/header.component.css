@@ -102,9 +102,6 @@ nav{
       border: none;
     }
     
-    .openbtn:hover {
-      background-color: #444;
-    }
     
     #main {
       display: block;
