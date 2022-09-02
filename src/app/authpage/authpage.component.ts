@@ -21,7 +21,9 @@ export class AuthpageComponent{
 
   signupUser(data: any){
     localStorage.setItem(data.emailId,data.password);
-    alert("You have successfully Signed UP, Please Login")
+    let dat = [data.emailId,'true']
+    sessionStorage.setItem("userdata",JSON.stringify(dat));
+    alert("You have successfully Signed UP")
     this.router.navigate(['/homepage',this.emailId]);
     console.log("data set")
     this.userForm.reset()
